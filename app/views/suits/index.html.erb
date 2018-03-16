@@ -1,0 +1,7 @@
+<h1>Listing all suits</h1>
+<p><%= link_to 'Back to Homepage', root_path %></p>
+<p>
+    <%= link_to "Add new suits", new_suit_path %>
+</p>
+
+<%= render 'suit', obj: @suits%>
