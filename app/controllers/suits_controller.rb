@@ -12,6 +12,9 @@ class SuitsController < ApplicationController
     
     def create
         @suit = Suit.new(suit_params)
+        if @suit.user_id == 0
+            @suit.user =nil
+        end
         if @suit.save
             #do something
             flash[:notice] = "Suit was succussfully added to the Closet!"
@@ -45,6 +48,6 @@ class SuitsController < ApplicationController
       end
       
       def suit_params
-          params.require(:suit).permit(:appid, :gender, :size, :description)
+          params.require(:suit).permit(:appid, :gender, :size, :description, :user_id)
       end
 end

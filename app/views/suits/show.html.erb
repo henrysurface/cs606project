@@ -13,6 +13,9 @@
 <p>
     Description: <%= @suit.description %>
 </p>
+<p>
+    Renter: <%= @suit.user.username if @suit.user%>
+</p>
 
 
 <%= link_to "Back to Closet", suits_path %> |

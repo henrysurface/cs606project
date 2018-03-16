@@ -14,8 +14,7 @@
         <td><%= suit.gender %></td>
         <td><%= suit.size %></td>
         <td><%= suit.description %></td>
-        <td> </td>
-        <!-- <td><#%= suit.user.username if suit.user%></td> -->
+        <td><%= suit.user.username if suit.user %></td>
         <td><%= link_to "Show", suit_path(suit) %></td>
         <td><%= link_to "Edit",edit_suit_path(suit) %></td>
         <td><%= link_to "Delete", suit_path(suit), method: :delete, data: {confirm: "Are you sure?"} %></td>

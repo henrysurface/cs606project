@@ -1,0 +1,31 @@
+<h1>All Users</h1>
+
+<table>
+    <tr>
+        <th>User Name</th>
+        <th>UIN</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Renting Suit</th>
+    </tr>
+    
+    <% @users.each do |user|%>
+    <tr>
+        <td><%= link_to user.username, user_path(user) %></td>
+        <td><%= user.UIN %></td>
+        <td><%= user.phone %></td>
+        <td><%= user.email %></td>
+        <td><%= user.suit.appid if user.suit %></td>
+        <td><%= link_to "Edit",edit_user_path(user) %></td>
+        <td><%= link_to "Show", user_path(user) %></td>
+        <td><%= link_to "Delete", user_path(user), method: :delete, data: {confirm: "Are you sure?"} %></td>
+    </tr>
+    <% end %>
+</table>
+
+<p>
+    <%= link_to "Back to the homepage", root_path %>
+</p>
+<p>
+    <%= link_to "Back to the Closet", suits_path %>
+</p>
