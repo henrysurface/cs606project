@@ -41,18 +41,39 @@ group :development, :test do
 
   gem 'rspec-rails'
   gem 'guard-rspec'
+  gem 'capybara', '~> 2.13'
+  gem 'selenium-webdriver'
+  gem 'database_cleaner'
   
+
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
+  #gem 'web-console', '~> 2.0'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring'
 end
 
 group :production do
   gem 'pg', '~>0.11'
   gem 'rails_12factor'
+end
+
+group :test do
+  # gem 'rails-controller-testing', '1.0.2'
+  # gem 'minitest-reporters',       '1.1.14'
+  # gem 'guard',                    '2.14.1'
+  # gem 'guard-minitest',           '2.4.6'
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+end
+
+group :development do
+  gem 'web-console'         
+  gem 'listen',                '3.1.5'
+  gem 'spring',                '2.0.2'
+  gem 'spring-watcher-listen', '2.0.1'
 end
