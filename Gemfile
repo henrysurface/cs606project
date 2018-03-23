@@ -44,6 +44,7 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'database_cleaner'
+  gem "factory_girl_rails", "~> 4.4.1"
   
 
   # Use sqlite3 as the database for Active Record
@@ -66,6 +67,8 @@ group :test do
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
+  gem "faker", "~> 1.4.3"
+  gem "factory_girl_rails", "~> 4.4.1"
 end
 
 group :development do
