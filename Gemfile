@@ -62,17 +62,14 @@ group :production do
 end
 
 group :test do
-  # gem 'rails-controller-testing', '1.0.2'
-  # gem 'minitest-reporters',       '1.1.14'
-  # gem 'guard',                    '2.14.1'
-  # gem 'guard-minitest',           '2.4.6'
+
   gem 'simplecov', :require => false
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
 end
 
 group :development do
-  gem 'web-console'         
+  gem 'web-console', '~> 2.0'       
   gem 'listen',                '3.1.5'
   gem 'spring',                '2.0.2'
   gem 'spring-watcher-listen', '2.0.1'

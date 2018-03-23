@@ -19,4 +19,5 @@
 
 
 <%= link_to "Back to Closet", suits_path %> |
-<%= link_to "Edit this suit", edit_suit_path(@suit) %>
+<%= link_to "Edit this suit", edit_suit_path(@suit) %> |
+<%= link_to "Delete this suit", suit_path(@suit), method: :delete %>

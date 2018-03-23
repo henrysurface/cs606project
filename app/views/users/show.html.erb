@@ -18,10 +18,13 @@
         <td><%= @user.username if@user.suit %></td>
     </tr>
 </table>
-<p>
-    <%= link_to "Back to Closet", suits_path %>
-</p>
 
 <p>
     <%= link_to "Back to see all users", users_path %>
+</p>
+<p>
+    <%= link_to "Edit profile", edit_user_path(@user) %>
+</p>
+<p>
+    <%= link_to "Delete user", user_path(@user), method: :delete %>
 </p>

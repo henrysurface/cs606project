@@ -16,7 +16,7 @@
         <td><%= suit.user.username if suit.user %></td>
         <td><%= link_to "Show", suit_path(suit) %></td>
         <td><%= link_to "Edit",edit_suit_path(suit) %></td>
-        <td><%= link_to "Delete", suit_path(suit), method: :delete, data: {confirm: "Are you sure?"} %></td>
+        <td><%= link_to "Delete", suit_path(suit), method: :delete %></td>
     </tr>
     <% end %>
 </table>

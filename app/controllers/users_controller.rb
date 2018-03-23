@@ -20,14 +20,20 @@ class UsersController < ApplicationController
     def update
         @user = User.find(params[:id])
         if @user.update(user_params)
-            flash[:notice] = "Your account was updated successfully"
-            redirect_to user_path(@user)
+            #flash[:success] = "Your account was updated successfully"
+            redirect_to user_path(@user), notice: "Your account was updated successfully"
         else
             render 'edit'
         end
     end
     def show
         @user = User.find(params[:id])
+    end
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        flash.keep[:notice] = "User was succussfully deleted"
+        redirect_to users_path
     end
     
     private
